@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32002.261
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MathUtil", "Main\MathUtil.csproj", "{8F9D374C-B0A5-4B69-9EE7-6104719904DF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fractions", "Fractions\Fractions.csproj", "{4A3FB6DA-C018-448E-BE7B-DDA8282C8313}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8F9D374C-B0A5-4B69-9EE7-6104719904DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F9D374C-B0A5-4B69-9EE7-6104719904DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F9D374C-B0A5-4B69-9EE7-6104719904DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F9D374C-B0A5-4B69-9EE7-6104719904DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A3FB6DA-C018-448E-BE7B-DDA8282C8313}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A3FB6DA-C018-448E-BE7B-DDA8282C8313}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A3FB6DA-C018-448E-BE7B-DDA8282C8313}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A3FB6DA-C018-448E-BE7B-DDA8282C8313}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5232C237-D5C2-479E-8E69-0DE6D7B07426}
+	EndGlobalSection
+EndGlobal
