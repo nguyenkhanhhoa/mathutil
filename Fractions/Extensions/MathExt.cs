@@ -125,14 +125,21 @@ namespace Fractions.Extensions {
         public static bool RemainingDigitsAfterTheDecimalPoint(double remainingDigits) {
             return Math.Abs(remainingDigits - Math.Floor(remainingDigits)) > double.Epsilon;
         }
-        public static decimal toDecimal(String v,out bool error)
+        public static decimal ToDecimal(String v,out bool error)
         {           
             error = !decimal.TryParse(v, NumberStyles.Number,
                    CultureInfo.InvariantCulture,
                    out decimal result);           
                 return result;
         }
-        public static Fraction toFraction(String v, out bool error)
+        public static long ToLong(String v, out bool error)
+        {
+            error = !long.TryParse(v, NumberStyles.Number,
+                   CultureInfo.InvariantCulture,
+                   out long result);
+            return result;
+        }
+        public static Fraction ToFraction(String v, out bool error)
         {
             try
             {
@@ -143,9 +150,7 @@ namespace Fractions.Extensions {
             {
                 error = true;
                 return Fraction.Zero;
-            }
-            
-            
+            }                        
         }
     }
 }

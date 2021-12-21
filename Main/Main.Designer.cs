@@ -31,6 +31,10 @@ namespace MathUtil
         {
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabDecimal = new System.Windows.Forms.TabPage();
+            this.txtDecimalResult6 = new System.Windows.Forms.TextBox();
+            this.txtLCM = new System.Windows.Forms.TextBox();
+            this.txtDecimalResult5 = new System.Windows.Forms.TextBox();
+            this.txtGCD = new System.Windows.Forms.TextBox();
             this.chkTopMost = new System.Windows.Forms.CheckBox();
             this.radio2 = new System.Windows.Forms.RadioButton();
             this.radio1 = new System.Windows.Forms.RadioButton();
@@ -69,12 +73,16 @@ namespace MathUtil
             this.tabControl.Location = new System.Drawing.Point(0, 0);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(909, 320);
+            this.tabControl.Size = new System.Drawing.Size(969, 354);
             this.tabControl.TabIndex = 0;
             this.tabControl.SelectedIndexChanged += new System.EventHandler(this.tabControl_SelectedIndexChanged);
             // 
             // tabDecimal
             // 
+            this.tabDecimal.Controls.Add(this.txtDecimalResult6);
+            this.tabDecimal.Controls.Add(this.txtLCM);
+            this.tabDecimal.Controls.Add(this.txtDecimalResult5);
+            this.tabDecimal.Controls.Add(this.txtGCD);
             this.tabDecimal.Controls.Add(this.chkTopMost);
             this.tabDecimal.Controls.Add(this.radio2);
             this.tabDecimal.Controls.Add(this.radio1);
@@ -96,17 +104,65 @@ namespace MathUtil
             this.tabDecimal.Location = new System.Drawing.Point(4, 29);
             this.tabDecimal.Name = "tabDecimal";
             this.tabDecimal.Padding = new System.Windows.Forms.Padding(3);
-            this.tabDecimal.Size = new System.Drawing.Size(901, 287);
+            this.tabDecimal.Size = new System.Drawing.Size(961, 321);
             this.tabDecimal.TabIndex = 1;
             this.tabDecimal.Text = "Phân số - Số thập phân";
             this.tabDecimal.UseVisualStyleBackColor = true;
+            // 
+            // txtDecimalResult6
+            // 
+            this.txtDecimalResult6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtDecimalResult6.BackColor = System.Drawing.SystemColors.Window;
+            this.txtDecimalResult6.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtDecimalResult6.ForeColor = System.Drawing.Color.Black;
+            this.txtDecimalResult6.Location = new System.Drawing.Point(845, 165);
+            this.txtDecimalResult6.Name = "txtDecimalResult6";
+            this.txtDecimalResult6.ReadOnly = true;
+            this.txtDecimalResult6.Size = new System.Drawing.Size(112, 31);
+            this.txtDecimalResult6.TabIndex = 27;
+            // 
+            // txtLCM
+            // 
+            this.txtLCM.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtLCM.BackColor = System.Drawing.SystemColors.Window;
+            this.txtLCM.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtLCM.ForeColor = System.Drawing.Color.Black;
+            this.txtLCM.Location = new System.Drawing.Point(478, 165);
+            this.txtLCM.Name = "txtLCM";
+            this.txtLCM.PlaceholderText = "Bội  số chung nhỏ nhất";
+            this.txtLCM.Size = new System.Drawing.Size(361, 31);
+            this.txtLCM.TabIndex = 26;
+            // 
+            // txtDecimalResult5
+            // 
+            this.txtDecimalResult5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtDecimalResult5.BackColor = System.Drawing.SystemColors.Window;
+            this.txtDecimalResult5.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtDecimalResult5.ForeColor = System.Drawing.Color.Black;
+            this.txtDecimalResult5.Location = new System.Drawing.Point(845, 128);
+            this.txtDecimalResult5.Name = "txtDecimalResult5";
+            this.txtDecimalResult5.ReadOnly = true;
+            this.txtDecimalResult5.Size = new System.Drawing.Size(112, 31);
+            this.txtDecimalResult5.TabIndex = 25;
+            // 
+            // txtGCD
+            // 
+            this.txtGCD.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtGCD.BackColor = System.Drawing.SystemColors.Window;
+            this.txtGCD.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtGCD.ForeColor = System.Drawing.Color.Black;
+            this.txtGCD.Location = new System.Drawing.Point(478, 128);
+            this.txtGCD.Name = "txtGCD";
+            this.txtGCD.PlaceholderText = "Ước số chung lớn nhất";
+            this.txtGCD.Size = new System.Drawing.Size(361, 31);
+            this.txtGCD.TabIndex = 24;
             // 
             // chkTopMost
             // 
             this.chkTopMost.AutoSize = true;
             this.chkTopMost.Checked = true;
             this.chkTopMost.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkTopMost.Location = new System.Drawing.Point(247, 239);
+            this.chkTopMost.Location = new System.Drawing.Point(320, 262);
             this.chkTopMost.Name = "chkTopMost";
             this.chkTopMost.Size = new System.Drawing.Size(86, 24);
             this.chkTopMost.TabIndex = 23;
@@ -117,7 +173,7 @@ namespace MathUtil
             // radio2
             // 
             this.radio2.AutoSize = true;
-            this.radio2.Location = new System.Drawing.Point(122, 239);
+            this.radio2.Location = new System.Drawing.Point(122, 262);
             this.radio2.Name = "radio2";
             this.radio2.Size = new System.Drawing.Size(78, 24);
             this.radio2.TabIndex = 22;
@@ -129,7 +185,7 @@ namespace MathUtil
             // 
             this.radio1.AutoSize = true;
             this.radio1.Checked = true;
-            this.radio1.Location = new System.Drawing.Point(8, 239);
+            this.radio1.Location = new System.Drawing.Point(8, 262);
             this.radio1.Name = "radio1";
             this.radio1.Size = new System.Drawing.Size(115, 24);
             this.radio1.TabIndex = 21;
@@ -140,91 +196,111 @@ namespace MathUtil
             // txtDecimalResult4
             // 
             this.txtDecimalResult4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtDecimalResult4.BackColor = System.Drawing.SystemColors.Window;
+            this.txtDecimalResult4.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtDecimalResult4.ForeColor = System.Drawing.Color.Red;
-            this.txtDecimalResult4.Location = new System.Drawing.Point(589, 192);
+            this.txtDecimalResult4.Location = new System.Drawing.Point(320, 202);
             this.txtDecimalResult4.Name = "txtDecimalResult4";
             this.txtDecimalResult4.ReadOnly = true;
-            this.txtDecimalResult4.Size = new System.Drawing.Size(309, 27);
+            this.txtDecimalResult4.Size = new System.Drawing.Size(152, 31);
             this.txtDecimalResult4.TabIndex = 20;
             // 
             // txtDecimalRatio1
             // 
             this.txtDecimalRatio1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtDecimalRatio1.Location = new System.Drawing.Point(296, 192);
+            this.txtDecimalRatio1.BackColor = System.Drawing.SystemColors.Window;
+            this.txtDecimalRatio1.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtDecimalRatio1.Location = new System.Drawing.Point(162, 202);
             this.txtDecimalRatio1.Name = "txtDecimalRatio1";
             this.txtDecimalRatio1.PlaceholderText = "Tỷ";
-            this.txtDecimalRatio1.Size = new System.Drawing.Size(290, 27);
+            this.txtDecimalRatio1.Size = new System.Drawing.Size(152, 31);
             this.txtDecimalRatio1.TabIndex = 19;
             // 
             // txtDecimalDiff1
             // 
             this.txtDecimalDiff1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtDecimalDiff1.Location = new System.Drawing.Point(3, 192);
+            this.txtDecimalDiff1.BackColor = System.Drawing.SystemColors.Window;
+            this.txtDecimalDiff1.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtDecimalDiff1.Location = new System.Drawing.Point(4, 202);
             this.txtDecimalDiff1.Name = "txtDecimalDiff1";
             this.txtDecimalDiff1.PlaceholderText = "Hiệu";
-            this.txtDecimalDiff1.Size = new System.Drawing.Size(289, 27);
+            this.txtDecimalDiff1.Size = new System.Drawing.Size(152, 31);
             this.txtDecimalDiff1.TabIndex = 18;
             // 
             // txtDecimalResult3
             // 
             this.txtDecimalResult3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtDecimalResult3.BackColor = System.Drawing.SystemColors.Window;
+            this.txtDecimalResult3.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtDecimalResult3.ForeColor = System.Drawing.Color.Red;
-            this.txtDecimalResult3.Location = new System.Drawing.Point(589, 160);
+            this.txtDecimalResult3.Location = new System.Drawing.Point(320, 165);
             this.txtDecimalResult3.Name = "txtDecimalResult3";
             this.txtDecimalResult3.ReadOnly = true;
-            this.txtDecimalResult3.Size = new System.Drawing.Size(309, 27);
+            this.txtDecimalResult3.Size = new System.Drawing.Size(152, 31);
             this.txtDecimalResult3.TabIndex = 17;
             // 
             // txtDecimalRatio
             // 
             this.txtDecimalRatio.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtDecimalRatio.Location = new System.Drawing.Point(296, 160);
+            this.txtDecimalRatio.BackColor = System.Drawing.SystemColors.Window;
+            this.txtDecimalRatio.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtDecimalRatio.Location = new System.Drawing.Point(162, 165);
             this.txtDecimalRatio.Name = "txtDecimalRatio";
             this.txtDecimalRatio.PlaceholderText = "Tỷ";
-            this.txtDecimalRatio.Size = new System.Drawing.Size(290, 27);
+            this.txtDecimalRatio.Size = new System.Drawing.Size(152, 31);
             this.txtDecimalRatio.TabIndex = 16;
             // 
             // txtDecimalSum1
             // 
             this.txtDecimalSum1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtDecimalSum1.Location = new System.Drawing.Point(3, 160);
+            this.txtDecimalSum1.BackColor = System.Drawing.SystemColors.Window;
+            this.txtDecimalSum1.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtDecimalSum1.Location = new System.Drawing.Point(4, 165);
             this.txtDecimalSum1.Name = "txtDecimalSum1";
             this.txtDecimalSum1.PlaceholderText = "Tổng";
-            this.txtDecimalSum1.Size = new System.Drawing.Size(289, 27);
+            this.txtDecimalSum1.Size = new System.Drawing.Size(152, 31);
             this.txtDecimalSum1.TabIndex = 15;
             // 
             // txtDecimalSum
             // 
             this.txtDecimalSum.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtDecimalSum.Location = new System.Drawing.Point(3, 128);
+            this.txtDecimalSum.BackColor = System.Drawing.SystemColors.Window;
+            this.txtDecimalSum.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtDecimalSum.ForeColor = System.Drawing.Color.Black;
+            this.txtDecimalSum.Location = new System.Drawing.Point(4, 128);
             this.txtDecimalSum.Name = "txtDecimalSum";
             this.txtDecimalSum.PlaceholderText = "Tổng";
-            this.txtDecimalSum.Size = new System.Drawing.Size(289, 27);
+            this.txtDecimalSum.Size = new System.Drawing.Size(152, 31);
             this.txtDecimalSum.TabIndex = 14;
             // 
             // txtDecimalResult2
             // 
             this.txtDecimalResult2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtDecimalResult2.ForeColor = System.Drawing.Color.Red;
-            this.txtDecimalResult2.Location = new System.Drawing.Point(589, 128);
+            this.txtDecimalResult2.BackColor = System.Drawing.SystemColors.Window;
+            this.txtDecimalResult2.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtDecimalResult2.ForeColor = System.Drawing.Color.Black;
+            this.txtDecimalResult2.Location = new System.Drawing.Point(320, 128);
             this.txtDecimalResult2.Name = "txtDecimalResult2";
             this.txtDecimalResult2.ReadOnly = true;
-            this.txtDecimalResult2.Size = new System.Drawing.Size(309, 27);
+            this.txtDecimalResult2.Size = new System.Drawing.Size(152, 31);
             this.txtDecimalResult2.TabIndex = 13;
             // 
             // txtDecimalDiff
             // 
             this.txtDecimalDiff.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtDecimalDiff.Location = new System.Drawing.Point(296, 128);
+            this.txtDecimalDiff.BackColor = System.Drawing.SystemColors.Window;
+            this.txtDecimalDiff.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtDecimalDiff.ForeColor = System.Drawing.Color.Black;
+            this.txtDecimalDiff.Location = new System.Drawing.Point(162, 128);
             this.txtDecimalDiff.Name = "txtDecimalDiff";
             this.txtDecimalDiff.PlaceholderText = "Hiệu";
-            this.txtDecimalDiff.Size = new System.Drawing.Size(290, 27);
+            this.txtDecimalDiff.Size = new System.Drawing.Size(152, 31);
             this.txtDecimalDiff.TabIndex = 12;
             // 
             // BtnDecimalClear
@@ -234,9 +310,9 @@ namespace MathUtil
             this.BtnDecimalClear.BackColor = System.Drawing.Color.Transparent;
             this.BtnDecimalClear.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.BtnDecimalClear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(172)))), ((int)(((byte)(89)))));
-            this.BtnDecimalClear.Location = new System.Drawing.Point(349, 229);
+            this.BtnDecimalClear.Location = new System.Drawing.Point(478, 257);
             this.BtnDecimalClear.Name = "BtnDecimalClear";
-            this.BtnDecimalClear.Size = new System.Drawing.Size(237, 45);
+            this.BtnDecimalClear.Size = new System.Drawing.Size(230, 34);
             this.BtnDecimalClear.TabIndex = 11;
             this.BtnDecimalClear.Text = "Clear";
             this.BtnDecimalClear.UseVisualStyleBackColor = false;
@@ -246,22 +322,22 @@ namespace MathUtil
             // 
             this.txtDecimalResult1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDecimalResult1.ForeColor = System.Drawing.Color.Red;
-            this.txtDecimalResult1.Location = new System.Drawing.Point(589, 62);
+            this.txtDecimalResult1.Location = new System.Drawing.Point(714, 62);
             this.txtDecimalResult1.Multiline = true;
             this.txtDecimalResult1.Name = "txtDecimalResult1";
             this.txtDecimalResult1.ReadOnly = true;
-            this.txtDecimalResult1.Size = new System.Drawing.Size(309, 56);
+            this.txtDecimalResult1.Size = new System.Drawing.Size(244, 56);
             this.txtDecimalResult1.TabIndex = 10;
             // 
             // txtDecimalResult
             // 
             this.txtDecimalResult.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDecimalResult.ForeColor = System.Drawing.Color.Red;
-            this.txtDecimalResult.Location = new System.Drawing.Point(588, 3);
+            this.txtDecimalResult.Location = new System.Drawing.Point(714, 3);
             this.txtDecimalResult.Multiline = true;
             this.txtDecimalResult.Name = "txtDecimalResult";
             this.txtDecimalResult.ReadOnly = true;
-            this.txtDecimalResult.Size = new System.Drawing.Size(309, 53);
+            this.txtDecimalResult.Size = new System.Drawing.Size(243, 53);
             this.txtDecimalResult.TabIndex = 9;
             // 
             // txtDecimalExpression1
@@ -272,7 +348,7 @@ namespace MathUtil
             this.txtDecimalExpression1.Multiline = true;
             this.txtDecimalExpression1.Name = "txtDecimalExpression1";
             this.txtDecimalExpression1.PlaceholderText = "Biểu thức";
-            this.txtDecimalExpression1.Size = new System.Drawing.Size(582, 56);
+            this.txtDecimalExpression1.Size = new System.Drawing.Size(704, 56);
             this.txtDecimalExpression1.TabIndex = 8;
             // 
             // BtnDecimalCalculate
@@ -282,9 +358,9 @@ namespace MathUtil
             this.BtnDecimalCalculate.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.BtnDecimalCalculate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.BtnDecimalCalculate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(179)))), ((int)(((byte)(148)))));
-            this.BtnDecimalCalculate.Location = new System.Drawing.Point(589, 229);
+            this.BtnDecimalCalculate.Location = new System.Drawing.Point(714, 257);
             this.BtnDecimalCalculate.Name = "BtnDecimalCalculate";
-            this.BtnDecimalCalculate.Size = new System.Drawing.Size(310, 45);
+            this.BtnDecimalCalculate.Size = new System.Drawing.Size(243, 34);
             this.BtnDecimalCalculate.TabIndex = 7;
             this.BtnDecimalCalculate.Text = "Calculate";
             this.BtnDecimalCalculate.UseVisualStyleBackColor = false;
@@ -298,7 +374,7 @@ namespace MathUtil
             this.txtDecimalExpression.Multiline = true;
             this.txtDecimalExpression.Name = "txtDecimalExpression";
             this.txtDecimalExpression.PlaceholderText = "Biểu thức";
-            this.txtDecimalExpression.Size = new System.Drawing.Size(582, 53);
+            this.txtDecimalExpression.Size = new System.Drawing.Size(705, 53);
             this.txtDecimalExpression.TabIndex = 6;
             // 
             // tabFraction
@@ -394,7 +470,7 @@ namespace MathUtil
             this.AcceptButton = this.BtnDecimalCalculate;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(909, 320);
+            this.ClientSize = new System.Drawing.Size(969, 354);
             this.Controls.Add(this.tabControl);
             this.Name = "Main";
             this.Text = "Main";
@@ -437,6 +513,10 @@ namespace MathUtil
         private System.Windows.Forms.RadioButton radio2;
         private System.Windows.Forms.RadioButton radio1;
         private System.Windows.Forms.CheckBox chkTopMost;
+        private System.Windows.Forms.TextBox txtDecimalResult5;
+        private System.Windows.Forms.TextBox txtGCD;
+        private System.Windows.Forms.TextBox txtDecimalResult6;
+        private System.Windows.Forms.TextBox txtLCM;
     }
 }
 
