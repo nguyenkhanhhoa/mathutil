@@ -126,7 +126,8 @@ namespace MathUtil
             // 
             // txtLeastCommonDenominator
             // 
-            this.txtLeastCommonDenominator.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtLeastCommonDenominator.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtLeastCommonDenominator.BackColor = System.Drawing.SystemColors.Window;
             this.txtLeastCommonDenominator.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtLeastCommonDenominator.ForeColor = System.Drawing.Color.Black;
@@ -150,7 +151,8 @@ namespace MathUtil
             // 
             // txtLCM
             // 
-            this.txtLCM.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtLCM.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtLCM.BackColor = System.Drawing.SystemColors.Window;
             this.txtLCM.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtLCM.ForeColor = System.Drawing.Color.Black;
@@ -174,7 +176,8 @@ namespace MathUtil
             // 
             // txtGCD
             // 
-            this.txtGCD.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtGCD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtGCD.BackColor = System.Drawing.SystemColors.Window;
             this.txtGCD.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtGCD.ForeColor = System.Drawing.Color.Black;
@@ -222,7 +225,6 @@ namespace MathUtil
             // 
             // txtDecimalResult4
             // 
-            this.txtDecimalResult4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDecimalResult4.BackColor = System.Drawing.SystemColors.Window;
             this.txtDecimalResult4.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtDecimalResult4.ForeColor = System.Drawing.Color.Red;
@@ -234,8 +236,6 @@ namespace MathUtil
             // 
             // txtDecimalRatio1
             // 
-            this.txtDecimalRatio1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDecimalRatio1.BackColor = System.Drawing.SystemColors.Window;
             this.txtDecimalRatio1.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtDecimalRatio1.Location = new System.Drawing.Point(107, 202);
@@ -246,8 +246,6 @@ namespace MathUtil
             // 
             // txtDecimalDiff1
             // 
-            this.txtDecimalDiff1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDecimalDiff1.BackColor = System.Drawing.SystemColors.Window;
             this.txtDecimalDiff1.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtDecimalDiff1.Location = new System.Drawing.Point(4, 202);
@@ -258,7 +256,6 @@ namespace MathUtil
             // 
             // txtDecimalResult3
             // 
-            this.txtDecimalResult3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDecimalResult3.BackColor = System.Drawing.SystemColors.Window;
             this.txtDecimalResult3.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtDecimalResult3.ForeColor = System.Drawing.Color.Red;
@@ -270,8 +267,6 @@ namespace MathUtil
             // 
             // txtDecimalRatio
             // 
-            this.txtDecimalRatio.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDecimalRatio.BackColor = System.Drawing.SystemColors.Window;
             this.txtDecimalRatio.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtDecimalRatio.Location = new System.Drawing.Point(107, 165);
@@ -282,8 +277,6 @@ namespace MathUtil
             // 
             // txtDecimalSum1
             // 
-            this.txtDecimalSum1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDecimalSum1.BackColor = System.Drawing.SystemColors.Window;
             this.txtDecimalSum1.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtDecimalSum1.Location = new System.Drawing.Point(4, 165);
@@ -294,8 +287,6 @@ namespace MathUtil
             // 
             // txtDecimalSum
             // 
-            this.txtDecimalSum.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDecimalSum.BackColor = System.Drawing.SystemColors.Window;
             this.txtDecimalSum.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtDecimalSum.ForeColor = System.Drawing.Color.Black;
@@ -307,7 +298,6 @@ namespace MathUtil
             // 
             // txtDecimalResult2
             // 
-            this.txtDecimalResult2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDecimalResult2.BackColor = System.Drawing.SystemColors.Window;
             this.txtDecimalResult2.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtDecimalResult2.ForeColor = System.Drawing.Color.Black;
@@ -319,8 +309,6 @@ namespace MathUtil
             // 
             // txtDecimalDiff
             // 
-            this.txtDecimalDiff.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDecimalDiff.BackColor = System.Drawing.SystemColors.Window;
             this.txtDecimalDiff.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtDecimalDiff.ForeColor = System.Drawing.Color.Black;
@@ -332,8 +320,7 @@ namespace MathUtil
             // 
             // BtnDecimalClear
             // 
-            this.BtnDecimalClear.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnDecimalClear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnDecimalClear.BackColor = System.Drawing.Color.Transparent;
             this.BtnDecimalClear.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.BtnDecimalClear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(172)))), ((int)(((byte)(89)))));
@@ -380,8 +367,7 @@ namespace MathUtil
             // 
             // BtnDecimalCalculate
             // 
-            this.BtnDecimalCalculate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnDecimalCalculate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnDecimalCalculate.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.BtnDecimalCalculate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.BtnDecimalCalculate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(179)))), ((int)(((byte)(148)))));
