@@ -1,4 +1,4 @@
-﻿using System; 
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -27,36 +27,35 @@ namespace MathUtil
         {
             InitializeComponent();
             var a = MathExt.GreatestCommonDivisor(1515, 2727);
-           var b=  MathExt.LeastCommonMultiple(6, 9);
+            var b = MathExt.LeastCommonMultiple(6, 9);
         }
         private void FractionCalulate(TextBox src, TextBox result)
         {
-            try { 
-            var expression = src.Text;
-            if (expression.Trim().Length == 0)
-                return;           
-            var infixNotationTokens = _tokenizer.Parse(expression);
-            var postfixNotationTokens = _shuntingYardAlgorithm.Apply(infixNotationTokens);
-            result.Text = _calculator.Calculate(postfixNotationTokens).Value.ToString();
+            try
+            {
+                var expression = src.Text;
+                if (expression.Trim().Length == 0)
+                    return;
+                var infixNotationTokens = _tokenizer.Parse(expression);
+                var postfixNotationTokens = _shuntingYardAlgorithm.Apply(infixNotationTokens);
+                result.Text = _calculator.Calculate(postfixNotationTokens).Value.ToString();
             }
             catch (Exception e)
             {
                 result.Text = e.Message;
             }
-
-
         }
         private void BtnFractionCalculate_Click(object sender, EventArgs e)
-        {           
+        {
             try
             {
                 FractionCalulate(this.txtFactionExpression, this.txtResult);
                 FractionCalulate(this.txtFactionExpression1, this.txtResult1);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 System.Diagnostics.Debug.Print(ex.StackTrace);
-            }            
+            }
         }
         private void Clear(Control control)
         {
@@ -88,7 +87,8 @@ namespace MathUtil
                 var postfixNotationTokens = _shuntingYardAlgorithm1.Apply(infixNotationTokens);
                 result.Text = _calculator1.Calculate(postfixNotationTokens).Value.ToString().Replace(".", ",");
             }
-            catch(Exception e) {
+            catch (Exception e)
+            {
                 result.Text = e.Message;
             }
         }
@@ -103,21 +103,21 @@ namespace MathUtil
             {
                 FractionCalulate(this.txtDecimalExpression, this.txtDecimalResult);
                 FractionCalulate(this.txtDecimalExpression1, this.txtDecimalResult1);
-               
+
             }
             decimal sum;
             decimal diff;
-            bool error,error1;
+            bool error, error1;
             sum = Fractions.Extensions.MathExt.ToDecimal(this.txtDecimalSum.Text, out error);
             diff = Fractions.Extensions.MathExt.ToDecimal(this.txtDecimalDiff.Text, out error1);
-            if(!error && !error1)
-                this.txtDecimalResult2.Text = $"Số lớn:{(sum+diff)/2}, Số bé: {(sum - diff) / 2}";
-            decimal sum1 = Fractions.Extensions.MathExt.ToDecimal(this.txtDecimalSum1.Text,out error);
-            Fraction ratio = Fractions.Extensions.MathExt.ToFraction(this.txtDecimalRatio.Text.Trim(),out error1);
             if (!error && !error1)
-            {                
-                var onePart = sum1 / ((decimal)(ratio.Denominator + ratio.Numerator));                             
-                this.txtDecimalResult3.Text = $"Số lớn:{onePart* ((decimal)BigInteger.Max(ratio.Denominator, ratio.Numerator))},  Số bé: {onePart* ((decimal)BigInteger.Min(ratio.Denominator, ratio.Numerator))}";
+                this.txtDecimalResult2.Text = $"Số lớn:{(sum + diff) / 2}, Số bé: {(sum - diff) / 2}";
+            decimal sum1 = Fractions.Extensions.MathExt.ToDecimal(this.txtDecimalSum1.Text, out error);
+            Fraction ratio = Fractions.Extensions.MathExt.ToFraction(this.txtDecimalRatio.Text.Trim(), out error1);
+            if (!error && !error1)
+            {
+                var onePart = sum1 / ((decimal)(ratio.Denominator + ratio.Numerator));
+                this.txtDecimalResult3.Text = $"Số lớn:{onePart * ((decimal)BigInteger.Max(ratio.Denominator, ratio.Numerator))},  Số bé: {onePart * ((decimal)BigInteger.Min(ratio.Denominator, ratio.Numerator))}";
             }
             diff = Fractions.Extensions.MathExt.ToDecimal(this.txtDecimalDiff1.Text, out error);
             ratio = Fractions.Extensions.MathExt.ToFraction(this.txtDecimalRatio1.Text.Trim(), out error1);
@@ -126,39 +126,171 @@ namespace MathUtil
                 var onePart = diff / Math.Abs((decimal)(ratio.Denominator - ratio.Numerator));
                 this.txtDecimalResult4.Text = $"Số lớn:{onePart * ((decimal)BigInteger.Max(ratio.Denominator, ratio.Numerator))},  Số bé: {onePart * ((decimal)BigInteger.Min(ratio.Denominator, ratio.Numerator))}";
             }
-            GCD(this.txtGCD,txtDecimalResult5);
-            LCM(this.txtLCM,txtDecimalResult6);
+            GCD(this.txtGCD, txtDecimalResult5);
+            LCM(this.txtLCM, txtDecimalResult6);
+            LCD(txtLeastCommonDenominator, txtDecimalResult7);
         }
-        private List<long> parse(TextBox src)
+        /*private void LCD(TextBox src, TextBox result)
+        {
+            try
+            {
+                var expression = src.Text;
+                if (expression.Trim().Length == 0)
+                    return;
+                var infixNotationTokens = _tokenizer1.Parse(expression);
+                var postfixNotationTokens = _shuntingYardAlgorithm1.Apply(infixNotationTokens);
+                Stack stack = new Stack();              
+                foreach (var token in postfixNotationTokens)
+                {
+                    switch (token)
+                    {
+                        case IOperandToken operandToken:
+                            stack.Push(token);
+                            break;
+                        case OperatorToken operatorToken:
+                            if (operatorToken.OperatorType == OperatorType.Division)
+                            {
+                                if (stack.Count < 2)
+                                {
+                                    result.Text = "Not enough arguments for applying a binary operator.";
+                                    return;
+                                }
+                                var right = (OperandToken<decimal>)stack.Pop();
+                                var left = (OperandToken<decimal>)stack.Pop();                                                                                     
+                                stack.Push(new Fraction((BigInteger)left.Value, (BigInteger)right.Value));
+                            }
+                            else
+                            {
+                                stack.Push(token);
+                            }
+                            break;
+                        default:
+                            result.Text = $"An unknown token type: {token.GetType()}.";
+                            return;
+                    }
+                }
+                var rs = "";
+                Stack stack1 = new Stack();
+                
+                while (stack.Count > 0)
+                {
+                    stack1.Push(stack.Pop());
+                }
+                while (stack1.Count > 0)
+                {
+                    var left = stack1.Pop();
+                    var right = stack1.Pop();
+                    var op = stack1.Pop();
+                }
+                result.Text = _calculator.Calculate(postfixNotationTokens).Value.ToString();
+            }
+            catch (Exception e)
+            {
+                result.Text = e.Message;
+            }
+        }*/
+
+        private void LCD(TextBox src, TextBox result)
+        {
+            try
+            {
+                List<String> numbers = parse(src);
+                if (numbers == null)
+                    return;
+                List<Fraction> fractions = null;
+                String rs = "";
+                if (numbers.Count > 1)
+                {
+                    long lcm = 1;
+                    fractions = new List<Fraction>();
+                    for (int i = 0; i < numbers.Count; i++)
+                    {
+                        bool error;
+                        Fraction fraction = MathExt.ToFraction(numbers[i], out error);
+                        if (!error)
+                        {
+                            fractions.Add(fraction);
+                            System.Diagnostics.Debug.WriteLine(fraction);
+                            lcm = MathExt.LeastCommonMultiple(lcm, (long)fraction.Denominator);
+                        }
+                    }
+                    if (fractions.Count > 1)
+                        foreach (var f in fractions)
+                        {
+                            rs += (lcm / f.Denominator * f.Numerator) + "/" + lcm + " ";
+                        }
+                }
+
+
+                result.Text = rs;
+            }
+            catch (Exception e)
+            {
+                result.Text = e.Message;
+            }
+        }
+        private List<long> parseNumber(TextBox src)
         {
             if (src.Text.Trim().Length == 0)
                 return null;
             List<long> numbers = new List<long>();
-            foreach (var num in src.Text.Trim().Split(","))
+            foreach (var num in src.Text.Trim().Split(" "))
             {
                 bool error;
-                long number = MathExt.ToLong(num, out error);
+                long number = MathExt.ToLong(num.Trim(), out error);
                 if (!error)
                     numbers.Add(number);
             }
+            if (numbers.Count < 2)
+            {
+                numbers.Clear();
+                foreach (var num in src.Text.Trim().Split(","))
+                {
+                    bool error;
+                    long number = MathExt.ToLong(num, out error);
+                    if (!error)
+                        numbers.Add(number);
+                }
+            }
             return numbers;
         }
-        private void GCD(TextBox src, TextBox result) {
+        private List<String> parse(TextBox src)
+        {
+            if (src.Text.Trim().Length == 0)
+                return null;
+            List<String> numbers = new List<String>();
+            foreach (var num in src.Text.Trim().Split(" "))
+            {
+                numbers.Add(num.Trim());
+            }
+            if (numbers.Count < 2)
+            {
+                numbers.Clear();
+                foreach (var num in src.Text.Trim().Split(","))
+                {
+                    numbers.Add(num.Trim());
+                }
+            }
+            return numbers;
+        }
+        private void GCD(TextBox src, TextBox result)
+        {
             try
             {
-                List<long> numbers = parse(src);
+                List<long> numbers = parseNumber(src);
                 if (numbers == null)
                     return;
                 long gcd = 0;
-                if (numbers.Capacity > 1) {
+                if (numbers.Capacity > 1)
+                {
                     gcd = numbers[0];
                     for (int i = 1; i < numbers.Count; i++)
                     {
-                        gcd = MathExt.GreatestCommonDivisor(gcd, numbers[i]);                      
+                        gcd = MathExt.GreatestCommonDivisor(gcd, numbers[i]);
                     }
                 }
-                if(gcd!=0)
-                result.Text = gcd.ToString();
+                if (gcd != 0)
+                    result.Text = gcd.ToString();
             }
             catch (Exception e)
             {
@@ -169,11 +301,11 @@ namespace MathUtil
         {
             try
             {
-                List<long> numbers = parse(src);
+                List<long> numbers = parseNumber(src);
                 if (numbers == null)
                     return;
                 long lcm = 0;
-                if (numbers.Capacity > 1)
+                if (numbers.Count > 1)
                 {
                     lcm = numbers[0];
                     for (int i = 1; i < numbers.Count; i++)

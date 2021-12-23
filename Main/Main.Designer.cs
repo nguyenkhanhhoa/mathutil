@@ -31,6 +31,8 @@ namespace MathUtil
         {
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabDecimal = new System.Windows.Forms.TabPage();
+            this.txtDecimalResult7 = new System.Windows.Forms.TextBox();
+            this.txtLeastCommonDenominator = new System.Windows.Forms.TextBox();
             this.txtDecimalResult6 = new System.Windows.Forms.TextBox();
             this.txtLCM = new System.Windows.Forms.TextBox();
             this.txtDecimalResult5 = new System.Windows.Forms.TextBox();
@@ -73,12 +75,14 @@ namespace MathUtil
             this.tabControl.Location = new System.Drawing.Point(0, 0);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(969, 354);
+            this.tabControl.Size = new System.Drawing.Size(969, 336);
             this.tabControl.TabIndex = 0;
             this.tabControl.SelectedIndexChanged += new System.EventHandler(this.tabControl_SelectedIndexChanged);
             // 
             // tabDecimal
             // 
+            this.tabDecimal.Controls.Add(this.txtDecimalResult7);
+            this.tabDecimal.Controls.Add(this.txtLeastCommonDenominator);
             this.tabDecimal.Controls.Add(this.txtDecimalResult6);
             this.tabDecimal.Controls.Add(this.txtLCM);
             this.tabDecimal.Controls.Add(this.txtDecimalResult5);
@@ -104,10 +108,33 @@ namespace MathUtil
             this.tabDecimal.Location = new System.Drawing.Point(4, 29);
             this.tabDecimal.Name = "tabDecimal";
             this.tabDecimal.Padding = new System.Windows.Forms.Padding(3);
-            this.tabDecimal.Size = new System.Drawing.Size(961, 321);
+            this.tabDecimal.Size = new System.Drawing.Size(961, 303);
             this.tabDecimal.TabIndex = 1;
             this.tabDecimal.Text = "Phân số - Số thập phân";
             this.tabDecimal.UseVisualStyleBackColor = true;
+            // 
+            // txtDecimalResult7
+            // 
+            this.txtDecimalResult7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtDecimalResult7.BackColor = System.Drawing.SystemColors.Window;
+            this.txtDecimalResult7.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtDecimalResult7.ForeColor = System.Drawing.Color.Black;
+            this.txtDecimalResult7.Location = new System.Drawing.Point(639, 202);
+            this.txtDecimalResult7.Name = "txtDecimalResult7";
+            this.txtDecimalResult7.Size = new System.Drawing.Size(318, 31);
+            this.txtDecimalResult7.TabIndex = 29;
+            // 
+            // txtLeastCommonDenominator
+            // 
+            this.txtLeastCommonDenominator.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtLeastCommonDenominator.BackColor = System.Drawing.SystemColors.Window;
+            this.txtLeastCommonDenominator.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtLeastCommonDenominator.ForeColor = System.Drawing.Color.Black;
+            this.txtLeastCommonDenominator.Location = new System.Drawing.Point(313, 202);
+            this.txtLeastCommonDenominator.Name = "txtLeastCommonDenominator";
+            this.txtLeastCommonDenominator.PlaceholderText = "Quy đồng mẫu số";
+            this.txtLeastCommonDenominator.Size = new System.Drawing.Size(320, 31);
+            this.txtLeastCommonDenominator.TabIndex = 28;
             // 
             // txtDecimalResult6
             // 
@@ -127,10 +154,10 @@ namespace MathUtil
             this.txtLCM.BackColor = System.Drawing.SystemColors.Window;
             this.txtLCM.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtLCM.ForeColor = System.Drawing.Color.Black;
-            this.txtLCM.Location = new System.Drawing.Point(478, 165);
+            this.txtLCM.Location = new System.Drawing.Point(313, 165);
             this.txtLCM.Name = "txtLCM";
             this.txtLCM.PlaceholderText = "Bội  số chung nhỏ nhất";
-            this.txtLCM.Size = new System.Drawing.Size(361, 31);
+            this.txtLCM.Size = new System.Drawing.Size(526, 31);
             this.txtLCM.TabIndex = 26;
             // 
             // txtDecimalResult5
@@ -151,10 +178,10 @@ namespace MathUtil
             this.txtGCD.BackColor = System.Drawing.SystemColors.Window;
             this.txtGCD.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtGCD.ForeColor = System.Drawing.Color.Black;
-            this.txtGCD.Location = new System.Drawing.Point(478, 128);
+            this.txtGCD.Location = new System.Drawing.Point(313, 128);
             this.txtGCD.Name = "txtGCD";
             this.txtGCD.PlaceholderText = "Ước số chung lớn nhất";
-            this.txtGCD.Size = new System.Drawing.Size(361, 31);
+            this.txtGCD.Size = new System.Drawing.Size(526, 31);
             this.txtGCD.TabIndex = 24;
             // 
             // chkTopMost
@@ -199,10 +226,10 @@ namespace MathUtil
             this.txtDecimalResult4.BackColor = System.Drawing.SystemColors.Window;
             this.txtDecimalResult4.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtDecimalResult4.ForeColor = System.Drawing.Color.Red;
-            this.txtDecimalResult4.Location = new System.Drawing.Point(320, 202);
+            this.txtDecimalResult4.Location = new System.Drawing.Point(210, 202);
             this.txtDecimalResult4.Name = "txtDecimalResult4";
             this.txtDecimalResult4.ReadOnly = true;
-            this.txtDecimalResult4.Size = new System.Drawing.Size(152, 31);
+            this.txtDecimalResult4.Size = new System.Drawing.Size(97, 31);
             this.txtDecimalResult4.TabIndex = 20;
             // 
             // txtDecimalRatio1
@@ -211,10 +238,10 @@ namespace MathUtil
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDecimalRatio1.BackColor = System.Drawing.SystemColors.Window;
             this.txtDecimalRatio1.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtDecimalRatio1.Location = new System.Drawing.Point(162, 202);
+            this.txtDecimalRatio1.Location = new System.Drawing.Point(107, 202);
             this.txtDecimalRatio1.Name = "txtDecimalRatio1";
             this.txtDecimalRatio1.PlaceholderText = "Tỷ";
-            this.txtDecimalRatio1.Size = new System.Drawing.Size(152, 31);
+            this.txtDecimalRatio1.Size = new System.Drawing.Size(97, 31);
             this.txtDecimalRatio1.TabIndex = 19;
             // 
             // txtDecimalDiff1
@@ -226,7 +253,7 @@ namespace MathUtil
             this.txtDecimalDiff1.Location = new System.Drawing.Point(4, 202);
             this.txtDecimalDiff1.Name = "txtDecimalDiff1";
             this.txtDecimalDiff1.PlaceholderText = "Hiệu";
-            this.txtDecimalDiff1.Size = new System.Drawing.Size(152, 31);
+            this.txtDecimalDiff1.Size = new System.Drawing.Size(97, 31);
             this.txtDecimalDiff1.TabIndex = 18;
             // 
             // txtDecimalResult3
@@ -235,10 +262,10 @@ namespace MathUtil
             this.txtDecimalResult3.BackColor = System.Drawing.SystemColors.Window;
             this.txtDecimalResult3.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtDecimalResult3.ForeColor = System.Drawing.Color.Red;
-            this.txtDecimalResult3.Location = new System.Drawing.Point(320, 165);
+            this.txtDecimalResult3.Location = new System.Drawing.Point(210, 165);
             this.txtDecimalResult3.Name = "txtDecimalResult3";
             this.txtDecimalResult3.ReadOnly = true;
-            this.txtDecimalResult3.Size = new System.Drawing.Size(152, 31);
+            this.txtDecimalResult3.Size = new System.Drawing.Size(97, 31);
             this.txtDecimalResult3.TabIndex = 17;
             // 
             // txtDecimalRatio
@@ -247,10 +274,10 @@ namespace MathUtil
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDecimalRatio.BackColor = System.Drawing.SystemColors.Window;
             this.txtDecimalRatio.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtDecimalRatio.Location = new System.Drawing.Point(162, 165);
+            this.txtDecimalRatio.Location = new System.Drawing.Point(107, 165);
             this.txtDecimalRatio.Name = "txtDecimalRatio";
             this.txtDecimalRatio.PlaceholderText = "Tỷ";
-            this.txtDecimalRatio.Size = new System.Drawing.Size(152, 31);
+            this.txtDecimalRatio.Size = new System.Drawing.Size(97, 31);
             this.txtDecimalRatio.TabIndex = 16;
             // 
             // txtDecimalSum1
@@ -262,7 +289,7 @@ namespace MathUtil
             this.txtDecimalSum1.Location = new System.Drawing.Point(4, 165);
             this.txtDecimalSum1.Name = "txtDecimalSum1";
             this.txtDecimalSum1.PlaceholderText = "Tổng";
-            this.txtDecimalSum1.Size = new System.Drawing.Size(152, 31);
+            this.txtDecimalSum1.Size = new System.Drawing.Size(97, 31);
             this.txtDecimalSum1.TabIndex = 15;
             // 
             // txtDecimalSum
@@ -275,7 +302,7 @@ namespace MathUtil
             this.txtDecimalSum.Location = new System.Drawing.Point(4, 128);
             this.txtDecimalSum.Name = "txtDecimalSum";
             this.txtDecimalSum.PlaceholderText = "Tổng";
-            this.txtDecimalSum.Size = new System.Drawing.Size(152, 31);
+            this.txtDecimalSum.Size = new System.Drawing.Size(97, 31);
             this.txtDecimalSum.TabIndex = 14;
             // 
             // txtDecimalResult2
@@ -284,10 +311,10 @@ namespace MathUtil
             this.txtDecimalResult2.BackColor = System.Drawing.SystemColors.Window;
             this.txtDecimalResult2.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtDecimalResult2.ForeColor = System.Drawing.Color.Black;
-            this.txtDecimalResult2.Location = new System.Drawing.Point(320, 128);
+            this.txtDecimalResult2.Location = new System.Drawing.Point(210, 128);
             this.txtDecimalResult2.Name = "txtDecimalResult2";
             this.txtDecimalResult2.ReadOnly = true;
-            this.txtDecimalResult2.Size = new System.Drawing.Size(152, 31);
+            this.txtDecimalResult2.Size = new System.Drawing.Size(97, 31);
             this.txtDecimalResult2.TabIndex = 13;
             // 
             // txtDecimalDiff
@@ -297,10 +324,10 @@ namespace MathUtil
             this.txtDecimalDiff.BackColor = System.Drawing.SystemColors.Window;
             this.txtDecimalDiff.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtDecimalDiff.ForeColor = System.Drawing.Color.Black;
-            this.txtDecimalDiff.Location = new System.Drawing.Point(162, 128);
+            this.txtDecimalDiff.Location = new System.Drawing.Point(107, 128);
             this.txtDecimalDiff.Name = "txtDecimalDiff";
             this.txtDecimalDiff.PlaceholderText = "Hiệu";
-            this.txtDecimalDiff.Size = new System.Drawing.Size(152, 31);
+            this.txtDecimalDiff.Size = new System.Drawing.Size(97, 31);
             this.txtDecimalDiff.TabIndex = 12;
             // 
             // BtnDecimalClear
@@ -470,7 +497,7 @@ namespace MathUtil
             this.AcceptButton = this.BtnDecimalCalculate;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(969, 354);
+            this.ClientSize = new System.Drawing.Size(969, 336);
             this.Controls.Add(this.tabControl);
             this.Name = "Main";
             this.Text = "Main";
@@ -517,6 +544,8 @@ namespace MathUtil
         private System.Windows.Forms.TextBox txtGCD;
         private System.Windows.Forms.TextBox txtDecimalResult6;
         private System.Windows.Forms.TextBox txtLCM;
+        private System.Windows.Forms.TextBox txtDecimalResult7;
+        private System.Windows.Forms.TextBox txtLeastCommonDenominator;
     }
 }
 

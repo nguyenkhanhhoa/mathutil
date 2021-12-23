@@ -105,7 +105,6 @@ namespace ShuntingYard
                 var exMessage = "Not enough arguments for applying a binary operator.";
                 throw new SyntaxException(exMessage);
             }
-
             var right = (OperandToken<T>)_operandTokensStack.Pop();
             var left = (OperandToken<T>)_operandTokensStack.Pop();
 
